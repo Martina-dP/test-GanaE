@@ -1,0 +1,11 @@
+.all {
+    display: flex;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    border-bottom: 1px solid blueviolet;
+    border-left: 1px solid blueviolet;
+    padding: .8rem;
+}

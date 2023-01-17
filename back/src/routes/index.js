@@ -9,11 +9,11 @@ const municipalitiGet = require("./municipalities/municipalities_Get")
 
 const router = Router();
 
-router.use('/contracts', contractGet);
-router.use('/create', contractrPost);
-router.use('/update', contractPut);
-router.use('/delete', contractDelete);
+router.use('/listcontracts', contractGet);
+router.use('/addcontract', contractrPost);
+router.use('/modifycontract', contractPut);
+router.use('/deletecontract', contractDelete);
 
-router.use('/municipalities', municipalitiGet);
+router.use('/getlocalidad', municipalitiGet);
 
 module.exports = router;

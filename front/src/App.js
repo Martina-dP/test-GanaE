@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import  Home from './components/home/home';
 import  Form from './components/form/form';
+import Update from './components/detail/putDetail'
  
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element= {<Home/>} />
-          <Route path="/form" element= {<Form/>} />
+          <Route path="/addcontract" element= {<Form/>} />
+          <Route path="/modifycontract" element= {<Update/>} />
         </Routes>
       </div>
     </BrowserRouter>
