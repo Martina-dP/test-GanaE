@@ -1,0 +1,11 @@
+.btn { 
+    margin: 1.4rem 0.4rem 0.4rem 1rem;
+}
+
+.title{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid blueviolet;
+    margin: 1rem;
+    font-size: 14px;
+}
