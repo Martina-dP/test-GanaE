@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const { MONGO_USER, MONGO_PASSWORD} = process.env
 
-const MONGO_URI = `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@cluster0.1uytx0l.mongodb.net/test`;
+const MONGO_URI = `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@cluster0.jm514jy.mongodb.net/test`;
 
 mongoose.set("strictQuery", false);
 mongoose.connect(MONGO_URI, {

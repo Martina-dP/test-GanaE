@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div>
       <Link to="/addcontract">
-        <button> Nuevo </button>
+        <button className={style.btn}> Nuevo </button>
       </Link>
       <div className={style.all} >
         <div className={style.title}>

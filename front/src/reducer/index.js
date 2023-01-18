@@ -10,7 +10,7 @@ const initialState = {
     contract: {},
     allContracts: [],
     contractDetail: {},
-    municipalities: {},
+    municipaliti: {},
     allMunicipalities: [],
   };
 
@@ -40,7 +40,7 @@ function rootReducer (state = initialState, { type, payload }) {
         case GET_MUNICIPALITIS :
             return {
                 ...state,
-                municipalities : payload,
+                municipaliti : payload,
                 allMunicipalities : payload
             };
         default: return state;

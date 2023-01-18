@@ -27,9 +27,9 @@ export function postContracts () {
     }
 }
 
-export function putContracts () {
+export function putContracts (_id, detail) {
     return async function(dispatch){
-        var json = await axios.get("http://localhost:3001/modifycontract")
+        var json = await axios.get(`http://localhost:3001/modifycontract/${_id}`, detail)
         return dispatch({
             type : "PUT_CONTRACTS",
             payload : json.data
@@ -47,9 +47,10 @@ export function deleteContracts () {
     }
 }
 
-export function getMunicipalitis () {
+export function getMunicipalitis() {
     return async function(dispatch){
         var json = await axios.get("http://localhost:3001/getlocalidad")
+        console.log(json, "action")
         return dispatch({
             type : "GET_MUNICIPALITIS",
             payload : json.data

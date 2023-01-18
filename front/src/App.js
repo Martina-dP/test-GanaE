@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element= {<Home/>} />
           <Route path="/addcontract" element= {<Form/>} />
-          <Route path="/modifycontract" element= {<Update/>} />
+          <Route path="/modifycontract/:_id" element= {<Update/>} />
         </Routes>
       </div>
     </BrowserRouter>

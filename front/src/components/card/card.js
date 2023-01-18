@@ -10,7 +10,7 @@ function Card ({name, document, _id }){
             <h2> {name} </h2>
             <h2> {document} </h2>
             <div>
-            <Link to="/modifycontract">
+            <Link to={`/modifycontract/${_id}`}>
               <button> Editar </button>
             </Link>
             <button> Eliminar </button>
