@@ -191,7 +191,6 @@ function handleSubmit(e){
             </div>
             <label className={style.label} > Codigo Postal : </label>
               <select className={style.input} onChange = {e => handelSelect(e) }>
-              <option value="">Select</option>
                 {municipalitiDetails.map(c => (
                     <option key={c._id} value={c.postalCode} > {c.codigo_postal} </option>
                 ))}

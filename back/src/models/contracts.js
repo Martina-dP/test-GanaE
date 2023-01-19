@@ -14,7 +14,27 @@ const contractSchema = new Schema({
 }
 );
 
-
+// contractSchema.plugin(autoIncrement);
+// contractSchema.pre("save", function (next) {
+//     let doc = this;
+//     sequencing.getSequenceNextValue("user_id").
+//     then(counter => {
+//         console.log("asdasd", counter);
+//         if(!counter) {
+//             sequencing.insertCounter("user_id")
+//             .then(counter => {
+//                 doc._id = counter;
+//                 console.log(doc)
+//                 next();
+//             })
+//             .catch(error => next(error))
+//         } else {
+//             doc._id = counter;
+//             next();
+//         }
+//     })
+//     .catch(error => next(error))
+// });
 
 module.exports = mongoose.model('Contract', contractSchema);
 

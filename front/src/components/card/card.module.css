@@ -4,7 +4,6 @@
     border-left: 2px solid blueviolet;
     border-bottom: 2px solid blueviolet;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.507);
     margin: 0 6rem;
 }
 
@@ -13,7 +12,8 @@
     text-align: start;
     align-items: center;
     padding: .4rem 0 .4rem .4rem;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: normal;
     display: flex;
 }
 
@@ -23,10 +23,16 @@
 
 .btn { 
     display: flex;
-    padding: .2rem;
-    margin-right: .4rem;
+    justify-content: center;
+    align-items: center;
+    margin: .4rem;
     font-size: 12px;
     cursor: pointer;
+    width: 5rem;
+    height: 1.6rem;
+    border: 1px solid blueviolet;
+    box-shadow: 0 2px 6px 2px rgb(185, 184, 185) ;
+    background-color: rgba(133, 22, 236, 0.404);
 }
 
 .img {

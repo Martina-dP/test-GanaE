@@ -11,22 +11,26 @@ function Card ({name, document, _id }){
     const dispatch = useDispatch();
 
     function handleOnClickDelete(_id, e) {
-        e.preventDefault()
         dispatch(deleteContracts(_id))
     }
+
+    const handleSubmit = e => {
+        e.preventDefault(); 
+      };
+    
 
     return(
         <div className={style.all}>
             <h2 className={style.text}> {_id} </h2>
             <h2 className={style.text}> {name} </h2>
             <h2 className={style.text}> {document} </h2>
-            <div className={style.btns && style.text}>
+            <div className={style.btns && style.text} onChange={e => handleSubmit(e)}>
                 <Link to={`/modifycontract/${_id}`}>
                     <button className={style.btn}> 
                         Editar <img className={style.img} src={Foto2} alt="notFound"/>
                     </button>
                 </Link>
-                    <button className={style.btn} onClick={(e) => handleOnClickDelete(_id, e)}> 
+                    <button className={style.btn} type="submit" onClick={(e) => handleOnClickDelete(_id, e)}> 
                         Eliminar <img className={style.img} src={Foto3} alt="notFound"/>
                     </button>
             </div>
