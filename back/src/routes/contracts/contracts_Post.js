@@ -5,7 +5,6 @@ const router = Router();
 
 router.post("/", async function( req, res) {
     const {
-        id,
         name,
         lastName1,
         lastName2,
@@ -20,16 +19,15 @@ router.post("/", async function( req, res) {
     try {
         
         const contractCreated = await Contract.create({
-            id: id,
-            name: name,
-            lastName1: lastName1,
-            lastName2:lastName2,
-            documentType: documentType,
-            document: document,
-            postalCode: postalCode,
-            location: location,
-            address: address,
-            phone: phone,
+            name,
+            lastName1,
+            lastName2,
+            documentType,
+            document,
+            postalCode,
+            location,
+            address,
+            phone,
         })
 
             res.json({contractCreated});

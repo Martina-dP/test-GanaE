@@ -1,18 +1,44 @@
 .btn { 
     margin: 2rem 0 0 6rem;
+    display: flex;
+    padding: .2rem;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .title{
     display: grid;
-    border-collapse: collapse;
-    border: 1px solid blueviolet;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid blueviolet;
     text-align: center;
     font-size: 14px;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.507);
     margin: 1rem 6rem 0 6rem;
-    grid-template-columns: repeat(4, 1fr);
 }
 
-.info {
+.text {
+    border-right: 2px solid blueviolet;
+    text-align: start;
+    padding: .4rem 0 .4rem .4rem;
+    font-size: 18px;
+}
+
+.img {
+    width: .8rem;
+    height: .8rem;
+    padding-left: .2rem;
+}
+
+.out {
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid blueviolet;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(128, 128, 128, 0.507);
     margin: 0 6rem;
+    border-right: 2px solid blueviolet;
+    padding: .4rem 0 .4rem .4rem;
+    font-size: 18px;
 }

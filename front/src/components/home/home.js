@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getContracts } from "../../action/index"
-import { Link } from "react-router-dom";
+import { getContracts, getMunicipalitis } from "../../action/index"
+import { Link  } from "react-router-dom";
+import Foto1 from "../../img/plus.png"
 import Card from "../card/card";
 import style from "./home.module.css";
 
@@ -12,6 +13,7 @@ const Home = () => {
 
   useEffect(() =>{ 
     dispatch(getContracts())
+    dispatch(getMunicipalitis())
   },[dispatch])
 
   const contracts = useSelector(state => state.contract) 
@@ -20,15 +22,17 @@ const Home = () => {
   return (
     <div>
       <Link to="/addcontract">
-        <button className={style.btn}> Nuevo </button>
+        <button className={style.btn}> 
+          Nuevo <img className={style.img} src={Foto1} alt="notFound"/>
+        </button>
       </Link>
       <div className={style.all} >
         <div className={style.title}>
 
-          <h2> Id </h2>
-          <h2> Nombre </h2>
-          <h2> Documento </h2>
-          <h2> Accion </h2>
+          <h2 className={style.text}> Id </h2>
+          <h2 className={style.text}> Nombre </h2>
+          <h2 className={style.text}> Documento </h2>
+          <h2 className={style.text}> Accion </h2>
 
         </div>
         <div className={style.info}>
@@ -44,7 +48,7 @@ const Home = () => {
               );
             }) ) : (
           <div>
-            <p>No se encontraron usuarios</p>
+            <p className={style.out}>No se encontraron usuarios</p>
           </div>
         )}
         </div>

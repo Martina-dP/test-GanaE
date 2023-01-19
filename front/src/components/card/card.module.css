@@ -1,11 +1,36 @@
-.all {
+.all{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border-bottom: 1px solid blueviolet;
-    border-left: 1px solid blueviolet;
-    border-right: 1px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid blueviolet;
     text-align: center;
-    font-weight: normal;
+    background-color: rgba(128, 128, 128, 0.507);
+    margin: 0 6rem;
+}
+
+.text {
+    border-right: 2px solid blueviolet;
+    text-align: start;
+    align-items: center;
+    padding: .4rem 0 .4rem .4rem;
+    font-size: 14px;
+    display: flex;
+}
+
+.btns{
+    margin: .4rem;
+}
+
+.btn { 
+    display: flex;
+    padding: .2rem;
+    margin-right: .4rem;
     font-size: 12px;
-    padding: .8rem;
+    cursor: pointer;
+}
+
+.img {
+    width: .8rem;
+    height: .8rem;
+    padding-left: .2rem;
 }

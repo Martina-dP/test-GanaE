@@ -3,7 +3,8 @@ import {
     POST_CONTRACTS,
     PUT_CONTRACTS,
     DELETE_CONTRACTS,
-    GET_MUNICIPALITIS
+    GET_MUNICIPALITIS,
+    FILTER_CP
     } from "../action/index"
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
     contractDetail: {},
     municipaliti: {},
     allMunicipalities: [],
+    dataFilter: [],
   };
 
 function rootReducer (state = initialState, { type, payload }) {
@@ -42,6 +44,13 @@ function rootReducer (state = initialState, { type, payload }) {
                 ...state,
                 municipaliti : payload,
                 allMunicipalities : payload
+            };
+        case FILTER_CP :
+            const locationFilter = state.municipaliti.find(e => e.codigo_postal === payload)
+            console.log(locationFilter, "locationFilter")
+            return {
+                ...state,
+                dataFilter : locationFilter,
             };
         default: return state;
     }
